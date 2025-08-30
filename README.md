@@ -229,7 +229,13 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-MIT License - see LICENSE file for details.
+MIT License - see [LICENSE](LICENSE) file for details.
+
+### Third-Party Licenses
+
+This library uses:
+- [page-flip](https://github.com/Nodlik/StPageFlip) - [MIT License](https://github.com/Nodlik/StPageFlip/blob/master/LICENSE)
+- [pdfjs-dist](https://github.com/mozilla/pdf.js) - [Apache 2.0 License](https://github.com/mozilla/pdf.js/blob/master/LICENSE)
 
 ## Support
 
