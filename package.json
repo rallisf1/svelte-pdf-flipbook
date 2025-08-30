@@ -24,6 +24,8 @@
 	},
 	"files": [
 		"dist",
+		"LICENSE",
+		"README.md",
 		"!dist/**/*.test.*",
 		"!dist/**/*.spec.*"
 	],
