@@ -4,18 +4,17 @@ A beautiful, interactive PDF flipbook component for Svelte 5+ that provides a re
 
 ## Features
 
-- ✨ **Realistic Page Flip Animation** - Smooth, natural page turning effects
-- 📄 **PDF.js Integration** - Renders PDF documents with high fidelity
-- 🎨 **Fully Customizable** - Adjust size, flip timing, and styling
-- 🎯 **TypeScript Support** - Fully typed with comprehensive event handling
-- 📱 **Responsive Design** - Works on desktop and mobile devices
-- ⚡ **Svelte 5 Ready** - Built with the latest Svelte 5 features ($state, $props)
+- **Realistic Page Flip Animation** - Smooth, natural page turning effects
+- **Fully Customizable** - Adjust size, flip timing, and styling
 
 ## Installation
 
 ```bash
-npm install svelte-pdf-flipbook
-```
+# Install the flipbook component
+pnpm install svelte-pdf-flipbook
+
+# Install required dependencies
+pnpm install page-flip pdfjs-dist
 
 ## Peer Dependencies
 
@@ -194,13 +193,6 @@ The component provides comprehensive error handling:
 {/if}
 ```
 
-## Browser Support
-
-- Chrome 80+
-- Firefox 75+
-- Safari 13.1+
-- Edge 80+
-
 ## Troubleshooting
 
 ### Common Issues
@@ -217,31 +209,18 @@ The component provides comprehensive error handling:
    - Make sure you're using Svelte 5+
    - Check import statements
 
-### CORS Issues
-
-For external PDF URLs, ensure proper CORS headers are set:
-```
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET
-```
-
 ## Development
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Develop
-npm run dev
+pnpm run dev
 
 # Build
-npm run build
+pnpm run build
 
-# Check types
-npm run check
-
-# Format code
-npm run format
 ```
 
 ## Contributing
@@ -262,7 +241,7 @@ If you encounter any issues or have questions:
 
 ## Changelog
 
-### v1.0.0-beta.1
+### v1.0.0-beta.0
 - Initial beta release
 - Svelte 5 compatibility
 - TypeScript support
