@@ -1,24 +1,8 @@
 <script lang="ts">
+	import type { PDFFlipbookProps } from './types.ts';
 	import type { PDFDocumentProxy } from 'pdfjs-dist';
 	import type * as PDFJS from 'pdfjs-dist';
 	import { onMount, onDestroy, tick } from 'svelte';
-
-	// Define event data types
-	interface FlipEventData {
-		page: number;
-		oldPage: number;
-	}
-
-	interface Props {
-		pdfUrl: string;
-		width?: number;
-		height?: number;
-		flippingTime?: number;
-		onFlip?: (event: CustomEvent<FlipEventData>) => void;
-		onStateChange?: (event: CustomEvent<{ state: string }>) => void;
-		onLoadingComplete?: (event: CustomEvent<{ pageCount: number }>) => void;
-		onError?: (event: CustomEvent<{ message: string }>) => void;
-	}
 
 	// Use $props() for component properties including event handlers
 	let {
@@ -30,7 +14,7 @@
 		onStateChange = () => {},
 		onLoadingComplete = () => {},
 		onError = () => {}
-	}: Props = $props();
+	}: PDFFlipbookProps = $props();
 
 	let status = $state({
 		isInitialLoading: true,
