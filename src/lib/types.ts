@@ -5,6 +5,7 @@ export interface FlipEventData {
 
 export interface PDFFlipbookProps {
 	pdfUrl: string;
+  workerSrc?: string;
 	width?: number;
 	height?: number;
 	flippingTime?: number;

@@ -3,6 +3,7 @@
 	import type { PDFDocumentProxy } from 'pdfjs-dist';
 	import type * as PDFJS from 'pdfjs-dist';
 	import { onMount, onDestroy, tick } from 'svelte';
+	import { setupPDFWorker } from './pdf-worker.ts';
 
 	// Use $props() for component properties including event handlers
 	let {
@@ -93,10 +94,7 @@
 		try {
 			// Dynamically import pdfjs-dist and set worker source
 			pdfjs = await import('pdfjs-dist');
-			pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-				'pdfjs-dist/build/pdf.worker.mjs',
-				import.meta.url
-			).href;
+			pdfjs.GlobalWorkerOptions.workerSrc = await setupPDFWorker();
 
 			// Dynamically import page-flip
 			const pageFlipModule = await import('page-flip');
