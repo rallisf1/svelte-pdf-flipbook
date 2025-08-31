@@ -3,7 +3,6 @@
 	import type { PDFDocumentProxy } from 'pdfjs-dist';
 	import type * as PDFJS from 'pdfjs-dist';
 	import { onMount, onDestroy, tick } from 'svelte';
-	import { setupPDFWorker } from './pdf-worker.ts';
 
 	// Use $props() for component properties including event handlers
 	let {
@@ -87,6 +86,16 @@
 		} catch (error) {
 			console.error('Error initializing page-flip:', error);
 			dispatchEvent(onError, { message: 'Failed to initialize flipbook' });
+		}
+	}
+
+	async function setupPDFWorker(): Promise<string> {
+		try {
+			return new URL('pdfjs-dist/build/pdf.worker.mjs', import.meta.url).href;
+		} catch (error) {
+			// Fallback for environments where URL resolution fails
+			console.warn(error);
+			return 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.54/pdf.worker.mjs';
 		}
 	}
 
