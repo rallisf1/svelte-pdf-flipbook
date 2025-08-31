@@ -9,12 +9,16 @@ A beautiful, interactive PDF flipbook component for Svelte 5+ that provides a re
 
 ## Installation
 
-```bash
-# Install the flipbook component
-pnpm install svelte-pdf-flipbook
+### Install the flipbook component
 
-# Install required dependencies
+```bash
+pnpm install svelte-pdf-flipbook
+```
+### Install required dependencies
+
+```bash
 pnpm install page-flip pdfjs-dist
+```
 
 ## Peer Dependencies
 
