@@ -94,7 +94,7 @@
 			// Dynamically import pdfjs-dist and set worker source
 			pdfjs = await import('pdfjs-dist');
 			pdfjs.GlobalWorkerOptions.workerSrc =
-				'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.54/pdf.worker.mjs';
+				'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.149/pdf.worker.mjs';
 
 			// Dynamically import page-flip
 			const pageFlipModule = await import('page-flip');
