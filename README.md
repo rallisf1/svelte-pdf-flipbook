@@ -7,6 +7,8 @@ A beautiful, interactive PDF flipbook component for Svelte 5+ that provides a re
 - **Realistic Page Flip Animation** - Smooth, natural page turning effects
 - **Fully Customizable** - Adjust size, flip timing, and styling
 
+> Live demo - https://svelte-pdf-flipbook.vercel.app/
+
 ## Installation
 
 ### Install the flipbook component
