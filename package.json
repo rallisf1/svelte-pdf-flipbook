@@ -1,6 +1,6 @@
 {
 	"name": "svelte-pdf-flipbook",
-	"version": "1.0.0-beta.2",
+	"version": "1.0.0-beta.3",
 	"description": "svelte-pdf-flipbook provides a component for rendering PDF documents interactively using pdfjs-dist and page-flip",
 	"homepage": "https://github.com/temesgen-982/svelte-pdf-flipbook#readme",
 	"bugs": {
